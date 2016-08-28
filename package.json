@@ -1,0 +1,47 @@
+{
+  "name": "mead-client",
+  "version": "1.0.0",
+  "description": "Client for the Mead image service",
+  "main": "src/index.js",
+  "umd": "umd/bundle.min.js",
+  "browser": {
+    "crypto": "./src/browser-crypto.js"
+  },
+  "scripts": {
+    "build": "npm run compile && npm run minify",
+    "compile": "browserify src/index.js -o umd/bundle.js --standalone=MeadClient",
+    "minify": "uglifyjs --compress --mangle -- umd/bundle.js > umd/bundle.min.js",
+    "coverage": "istanbul cover tape test/**/*.test.js",
+    "test": "tape test/**/*.test.js",
+    "postcoverage": "eslint .",
+    "posttest": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rexxars/mead-client.git"
+  },
+  "keywords": [
+    "mead",
+    "image",
+    "resize",
+    "url",
+    "sign"
+  ],
+  "author": "Espen Hovlandsdal <espen@hovlandsdal.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rexxars/mead-client/issues"
+  },
+  "homepage": "https://github.com/rexxars/mead-client#readme",
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "eslint": "^3.4.0",
+    "eslint-config-bengler": "^2.0.0",
+    "istanbul": "^0.4.5",
+    "tape": "^4.6.0",
+    "uglify-js": "^2.7.3"
+  },
+  "dependencies": {
+    "blueimp-md5": "^2.3.0"
+  }
+}
