@@ -14,7 +14,8 @@
     "coverage": "istanbul cover tape test/**/*.test.js",
     "test": "tape test/**/*.test.js",
     "postcoverage": "eslint .",
-    "posttest": "eslint ."
+    "posttest": "eslint .",
+    "prepublish": "npm run build && npm run test"
   },
   "repository": {
     "type": "git",
