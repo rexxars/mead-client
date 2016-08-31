@@ -24,7 +24,7 @@ var imageUrl = client.getUrl('/path/to/image.png', {w: 1280, h: 720})
 
 ## Browser usage
 
-The NPM package ships with an UMD-bundle which is optimized for browsers. You can load it from [npmcdn](https://npmcdn.com/) by referencing the `umd`-field: https://npmcdn.com/mead-client?main=umd
+The NPM package ships with an UMD-bundle which is optimized for browsers. You can load it from [unpkg](https://unpkg.com/) by referencing the `umd`-field: https://unpkg.com/mead-client?main=umd
 
 It will be available under `window.MeadClient` or as an AMD and CommonJS module under `mead-client`.
 
